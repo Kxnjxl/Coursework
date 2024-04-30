@@ -5,4 +5,7 @@ const path = window.location.pathname;
 const navPage = document.querySelectorAll('a[href="' + path + '"]');
 navPage.forEach(link => {
     link.classList.add('active');
+    //Add css properties
+    link.style.textDecoration = 'underline'; // Underline the text
+    link.style.textDecorationColor = '#F58D93'; // Set the underline color
 });

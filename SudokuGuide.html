@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>FUNOKU</title>
-	<link rel="stylesheet" href="Sudoku.css">
+	<link rel="stylesheet" href="SudokuGuide.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
@@ -11,13 +11,13 @@
 <body>
 	<header>
 		<nav>
-			<a href="Sudoku.html"><img src="logo2.png"></a>
+			<a href="SudokuGuide.html"><img src="logo2.png"></a>
 			<div class="nav-links">
 				<ul>
-					<li><a href="">HOME</a></li>
-					<li><a href="">GUIDE</a></li>
-					<li><a href="">PLAY</a></li>
-					<li><a href="">PROFILE</a></li>
+					<li><a href="Index.html">HOME</a></li>
+					<li><a href="SudokuGuide.html">GUIDE</a></li>
+					<li><a href="SudokuPlay.html">PLAY</a></li>
+					<li><a href="SudokuProfile.html">PROFILE</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -25,20 +25,22 @@
 	<div class="Intro">
 		<h1>Adventure Awaits: Your Ultimate Guide to Fun!</h1>
 		<h2>Let's walk you through the rules of Sudoku :)</h2>
-		<h3>Introduction</h3>
+		<h3>Rules</h3>
 		<p>Sudoku is a logic puzzle, where people use deductive reasoning and search for patterns to find out where to place missing numbers on the grid.</p>
-		<p>Believe it or not, Sudoku didn't originate in the digital age. It traces its roots back to 18th-century Switzerland, where it was known as "Number Place." However, it wasn't until the late 20th century that Sudoku gained global popularity, thanks in part to its introduction in Japanese puzzle magazines in the 1980s.</p>
-		<h4>Rules</h4>
-		<p>The name "Sudoku" itself has Japanese origins, with "su" meaning "number" and "doku" meaning "single." In Japan, Sudoku became an instant hit, captivating puzzle enthusiasts with its simple rules and captivating logic.</p>
-		<p>Fast forward to today, and Sudoku has become a worldwide phenomenon, appearing in newspapers, puzzle books, and online platforms. It's not just a game – it's a mental workout, a stress reliever, and a beloved pastime for millions of people around the globe.</p>	
-		<h5></h5>
-		<p>Did you know that there are more possible Sudoku puzzles than there are atoms in the observable universe? That's right – with approximately 6.67 x 10^21 possible grids, you'll never run out of Sudoku challenges to tackle!</p>
-		<p>So, whether you're a Sudoku aficionado or a curious newcomer, we invite you to explore the captivating world of Sudoku right here on our website. Get ready to test your wits, unleash your inner problem-solver, and experience the timeless allure of this classic puzzle game.</p>
-		<h6>Happy puzzling!</h6>
+		<h4>Rule 1: Using Numbers 1-9</h4>
+		<p>Sudoku is played on a grid of 9 x 9 spaces. Every row, column and grid has 9 cells. Each row, column and grid needs to be filled out with the numbers 1-9, making sure there is no repitiion of numbers in any row, column and grid.</p>
+		<p>The game gets easier as more numbers are filled in. Sounds complicated? Don't worry, as you play the game, it definetely gets easier to understand, so don't forget to give it a try!</p>	
+		<img src= "sudokuexample.png" alt="Example" id="ex"/>
+		<h5>Rule 2: No Repitions</h5>
+		<p>As you can see, in the upper left grid (circled), 7 out of the 9 cells have been filled in. The only numbers missing from the square are 1 and 4. By seeing which numbers are missing from each square, row, or column, we can use process of elimination and deductive reasoning to decide which numbers need to go in the blank cells.</p>
+		<p>For example, in the upper left grid, we know what numbers we need to complete the grid:1 & 4,and based on the neighboring rows and squares we can see the upper right blank cell can have 4 in it because the lower blank cell cannot as it's row already has a 4. This leaves the lower cell with the number 1 to be placed in it, therefore completing the grid. </p>
+		<h5>Rule 3: Don't Guess</h6>
+		<p>Sudoku is a game of logic and reasoning, so don't try to guess as one wrong guess can mess the whole puzzle up. If you dont know what number to place in a cell, keep scanning other grids/rows/columns until you find an opportunity. Sudoku rewards patience and with time you will build tricks and techniques which will help you solve the puzzles quicker.</p>
+		<h6>Happy puzzling!</h7>
 	</div>
 	
 	<!-------------------Guide--------------------->
 	
-	
+	<script src="navigation.js"></script>
 </body>
 </html>

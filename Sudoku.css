@@ -63,6 +63,7 @@ nav img{
 	text-align: center;
 }
 .Intro h1{
+	padding-top: 5%;
 	font-size: 30px;
 }
 .Intro h2{
@@ -91,8 +92,8 @@ nav img{
 	margin-top: 5px;
 	padding-left: 20%;
 	padding-right: 20%;
-	font-size: 15px;
-	font-weight: 550;
+	font-size: 17px;
+	font-weight: 500;
 	color: #000000;
 }
 
@@ -111,7 +112,7 @@ nav img{
 		font-size: 20px;
 	}
 	.Intro h2{
-		font-size: 17px;
+		font-size: 18px;
 	}
 	.Intro h3{
 		font-size: 15px;
@@ -141,7 +142,7 @@ nav img{
 		padding-bottom: 5%;
 	}
 	.Intro h1{
-		font-size: 17px;
+		font-size: 18px;
 		position: relative;
 	}
 	.Intro h2{

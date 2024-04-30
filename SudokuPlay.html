@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FUNOKU</title>
+	<link rel="stylesheet" href="SudokuPlay.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+		<nav>
+			<a href="SudokuPlay.html"><img src="logo2.png"></a>
+			<div class="nav-links">
+				<ul>
+					<li><a href="Sudoku.html">HOME</a></li>
+					<li><a href="SudokuGuide.html">GUIDE</a></li>
+					<li><a href="SudokuPlay.html">PLAY</a></li>
+					<li><a href="SudokuProfile.html">PROFILE</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="main">
+		<div class="screen">
+			<div class="play-screen active" id="p-screen">
+				<div class="Intro">
+					<h1>Let's start Sudoku-ing!</h1>
+					<p>You can choose from three different levels : Easy, Medium and Hard. <br>As soon as you master one level you can move on to the next one!<br>Don't worry, you'll always have a different puzzle to solve, so you definitely won't get bored!<p>
+				</div>
+				<div class="play level" id="play">				
+					<div class="option level" id="option-levels">
+						Easy
+					</div>	
+					<div class="option continue" id="option-continue">Continue</div>
+					<div class="option option-grey" id="option-play">New Game</div>
+				</div>
+			</div>
+			<div class="game-screen" id="game">
+				<div class = "sudoku-grid">
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+					<div class="sudoku-grid-cell"></div>
+
+				</div>
+				<div class="game-settings">
+					<div class="game-settings-choices level">
+						<span id="game-level">Easy</span>
+					</div>
+				</div>
+				<div class="game-settings-choices time">
+					<span id="game-time">00:00:00</span>
+					<div class="pause" id="pause-btn">
+						<i class="bx bx-pause pausing active"></i>
+						<i class="bx bx-play playing"></i>
+					</div>
+				</div>
+				<div class="game-settings-choices new-game">
+					<span id="new-game">New game</span>
+				</div>
+				<div class="numbers">
+					<div class="number">1</div>
+					<div class="number">2</div>
+					<div class="number">3</div>
+					<div class="number">4</div>
+					<div class="number">5</div>
+					<div class="number">6</div>
+					<div class="number">7</div>
+					<div class="number">8</div>
+					<div class="number">9</div>
+					<div class="delete" id="delete-btn">X</div>
+				</div>
+			</div>
+			<div class="result-screen" id="result-screen">
+				<div class="congrate" id="completed">Congratulations!</div>
+				<div class="time" id="result-time">Time-Taken : </div>
+				<div class="ng button" id="new-game-2">New game</div>
+			</div>
+		</div>
+	</div>
+	<script src="Play.js"></script>
+	<script src="SudokuPuzzle.js"></script>
+	<script src="SudokuPlay.js"></script>
+	<script src="navigation.js"></script>
+</body>
+
+</html>

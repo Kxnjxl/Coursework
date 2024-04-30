@@ -1,0 +1,410 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	font-family: "Edu NSW ACT Foundation", cursive;
+}
+body{
+	background-image: url("BG2.png");
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
+	user-select: none;
+}
+
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav img{
+	width: 220px;
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 14px;
+	position: relative;
+}
+.nav-links ul li a{
+	color: #000000;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #F58D93;
+	display: block;
+	margin: auto;
+	transition: 1.0s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+.main{
+	height: 100vh;
+	place-items: center;
+}
+.screen {
+    position: relative;
+    height: 100%;
+    min-width: 400px;
+}
+.play-screen{
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 100%;
+	position: relative;
+	text-align: center;
+	padding-left: 20%;
+	padding-right: 20%;
+	transform: translateX(100%);
+	transition: transform .3s ease-in-out;
+}
+
+.play-screen.active{
+	transform: translateX(0);
+}
+
+.play{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.Intro h1{
+	overflow-wrap: break-word;
+	margin-top: 6%;
+	padding-bottom: 10%;
+	width: 100%;
+	color: #000000;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.Intro p{
+	padding-top: 10%;
+	font-size: 20px;
+	font-weight: 550;
+	color: #000000;
+}
+.option{
+	margin-top: 2%;
+	width: 200px;
+	color: #000;
+	height: 50px;
+	border-radius: 20px;
+	align-items: center;
+	align-content: center;
+	overflow: hidden;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: rgba(247, 211, 229, 0.47);
+}
+.level{
+	margin-top: -15px;
+}
+.option-grey {
+    background-color: #f594abbd; /* Background color with opacity */
+    color: #0c0b0b; /* Text color */
+	align-content: center;
+}
+
+.game-screen{
+	margin-top: -25%;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	transform: translateX(100%);
+	transition: transform .3s ease-in-out;
+}
+.game-screen.active{
+	transform: translateX(0);
+}
+
+.sudoku-grid{
+	margin-top: 0;
+	display: grid;
+	gap: 3px;
+	grid-template-columns: repeat(9, auto);
+}
+
+.sudoku-grid-cell{
+	height: 40px;
+	width: 40px;
+	background-color:  rgba(51, 49, 52, 0.466);
+	border-radius: 10px;
+	place-items: center;
+	display: grid;
+	font-size: 1.25rem;
+	color: #000000;
+	cursor: pointer;
+	box-sizing: border-box;
+	border: 2px solid #676464b3;
+}
+
+.sudoku-grid-cell.filled{
+	background-color: rgba(51, 49, 52, 0.466);
+	color: #fffafa;
+}
+
+.sudoku-grid-cell.selected{
+	background-color: #655f5f;
+	color: rgb(11, 11, 11);
+}
+
+.sudoku-grid-cell:hover {
+	border: 3px solid #030303a2;
+}
+
+.sudoku-grid-cell.hover{
+	border: 2px solid #030303a2;
+}
+.sudoku-grid-cell.err{
+	background-color: #333131a3;
+	color: rgb(8, 8, 8);
+}
+
+.game-settings{
+	display: grid;
+	position: absolute;
+	width: 70px;
+	top: 2.5%;
+	right: 22%;
+	transform: translateX(-50%);
+	place-items: right;
+}
+
+.game-settings-choices{
+	height: 40px;
+	background-color: rgba(237, 139, 154, 0.781);
+	color: #000000;
+	border-radius: 10px;
+	border: 2px solid #676464;
+	display: grid;
+	place-content: center;
+	padding: 5px 30px;
+	padding-top: 2px;
+	font-size: 1.5rem;
+	place-items: right;
+}
+.game-settings-choices.level{
+	position: absolute;
+	white-space: nowrap;
+}
+.game-settings-choices.time{
+	margin-top: 50px;
+	width: 170px;
+	grid-template-columns: repeat(1, 1fr);
+	display: grid;
+	position: absolute;
+	top: 0;
+	right: 13.5%;
+	align-content: center;
+	place-items: right;
+	transform: translateX(-27%);
+	padding: 5px 60px;
+	box-sizing: border-box;
+}
+
+.pausing.active{
+	position: absolute;
+	right: 2px;
+	height: 30px;
+	top: 3px;
+	width: 30px;
+	border-radius: 10px;
+	background-color: rgba(247, 243, 245, 0.781);
+	color: #000000;
+	font-size: 1.5rem;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+}
+.pausing:not(.active){
+	display: none;
+}
+.playing.active{
+	position: absolute;
+	right: 2px;
+	height: 30px;
+	top: 3px;
+	width: 30px;
+	border-radius: 10px;
+	background-color: rgba(247, 243, 245, 0.781);
+	color: #000000;
+	font-size: 1.5rem;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+}
+.playing:not(.active){
+	display: none;
+}
+.numbers{
+	display: grid;
+	grid-template-columns: repeat(3, 2fr);
+	gap: 5px;
+	margin-top: 135px;
+	display: grid;
+	position: absolute;
+	top: 0;
+	right: 14%;
+	align-content: center;
+	align-items: center;
+	transform: translateX(-50%);
+}
+
+.number{
+	height: 40px;
+	width: 40px;
+	border-radius: 10px;
+	background-color: rgba(247, 243, 245, 0.781);
+	border: 2px solid #676464;
+	color: #000000;
+	display: grid;
+	place-items: center;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.number:hover {
+	border: 3px solid #403f3f;
+}
+.delete{
+	transform: translateX(115%);
+	align-items: center;
+	align-content: center;
+	border: 2px solid #676464;
+	color: #d40c27;
+	font-style: bold;
+	display: grid;
+	place-content: center;
+	font-size: 1.5rem;
+	cursor: pointer;
+	height: 40px;
+	width: 40px;
+	border-radius: 10px;
+	background-color: rgba(247, 243, 245, 0.781);
+}
+.delete:hover {
+	border: 3px solid #403f3f;
+}
+.game-settings-choices.new-game{
+	right: 12.50%;
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: 33%;
+}
+
+.game-settings-choices.new-game:hover{
+	border: 3px solid #403f3f;
+}
+
+.result-screen {
+    display: none; /* Initially hide the result screen */
+    /* Other styles remain the same */
+}
+
+.result-screen.active {
+	background-image: url("BG2.png");
+	display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	place-items: center;
+	place-content: center;
+	position: relative;
+	top: -70%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+.congrate {
+	margin-top: 10px;;
+    font-size: 3rem;
+	background-color: #fddce9; /* Background color with opacity */
+	padding: 5px 5px;
+	padding-top: 2px;
+	border-radius: 10px;
+    color: #0c0b0b; /* Text color */
+	align-content: center;
+}
+
+#result-time {
+	margin-top: 20px;
+	background-color: transparent; /* Background color with opacity */
+	padding: 5px 5px;
+	padding-top: 2px;
+	border-radius: 10px;
+	border:2px solid #fddce9 ;
+    color: #0c0b0b; /* Text color */
+	align-content: center;
+    font-size: 2rem;
+}
+
+.ng {
+	width: 170px;
+	background-color: #fddce9; /* Background color with opacity */
+	padding-top: 2px;
+	border-radius: 15px;
+    color: #0c0b0b; /* Text color */
+	border: 1.5px solid #0c0b0b;
+	align-content: center;
+    font-size: 2rem;
+	margin-top: 20px;
+}
+
+.ng.button{
+	height: 50px;
+	padding: 5px 5px;
+	padding-left: 25px;
+	align-content: center;
+	place-content: center;
+}
+
+.zoom-in {
+    animation: zoom-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cell-err {
+    animation: zoom-out-shake 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes zoom-out-shake {
+    0% {
+        transform: scale(2);
+    }
+    25% {
+        transform: scale(2) rotate(30deg);
+    }
+    50% {
+        transform: scale(2) rotate(-30deg);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

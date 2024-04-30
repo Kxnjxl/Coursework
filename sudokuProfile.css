@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	font-family: "Edu NSW ACT Foundation", cursive;
+}
+body{
+	background-image: url("BG2.png");
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
+	user-select: none;
+}
+
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav img{
+	width: 220px;
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 14px;
+	position: relative;
+}
+.nav-links ul li a{
+	color: #000000;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #F58D93;
+	display: block;
+	margin: auto;
+	transition: 1.0s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+.main{
+	height: 100vh;
+	place-items: center;
+}
+.account{
+    margin-top: 10%;
+	display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	place-items: center;
+	place-content: center;
+    align-content: center;
+	position: relative;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+.option.sign-in{
+	width: 170px;
+	background-color: #fddce9; /* Background color with opacity */
+	padding-top: 2px;
+	border-radius: 15px;
+    color: #0c0b0b; /* Text color */
+	border: 1.5px solid #0c0b0b;
+	align-content: center;
+    place-content: center;
+    font-size: 2rem;
+	margin-top: 20px;
+}
+#sign-in{
+    height: 50px;
+	padding: 5px 5px;
+	padding-left: 40px;
+	align-content: center;
+	place-content: center;
+}
+.option.create{
+	background-color: #fddce9; /* Background color with opacity */
+	padding-top: 2px;
+	border-radius: 15px;
+    color: #0c0b0b; /* Text color */
+	border: 1.5px solid #0c0b0b;
+	align-content: center;
+    place-content: center;
+    font-size: 1.5rem;
+	margin-top: 20px;
+    text-wrap: nowrap;
+}
+#create{
+    height: 50px;
+	padding: 5px 5px;
+	padding-left: 5px;
+	align-content: center;
+	place-content: center;
+}

@@ -1,0 +1,181 @@
+*{
+	margin: 0;
+	padding:0;
+	font-family: "Edu NSW ACT Foundation", cursive;
+}
+body{
+	min-height: 100vh;
+	width: 100%;
+	background-image: url("BG2.png");
+	background-position: top;
+	background-size: 100% 100%;
+	position: relative;
+	background-repeat: repeat;   
+}
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav img{
+	width: 220px;
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 14px;
+	position: relative;
+}
+.nav-links ul li a{
+	color: #000000;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #F58D93;
+	display: block;
+	margin: auto;
+	transition: 1.0s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+
+.Intro{
+	overflow-wrap: break-word;
+	margin-top: 25%;
+	padding-bottom: 5%;
+	width: 100%;
+	color: #000000;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: left;
+}
+.Intro h1{
+    text-align: center;
+	padding-top: 5%;
+	font-size: 30px;
+}
+.Intro h2{
+    text-align: center;
+	padding-top: 2%;
+	font-size: 22px;
+}
+.Intro h3{
+    padding-left: 10%;
+	padding-top: 2%;
+	font-size: 20px;
+}
+.Intro h4{
+    padding-left: 10%;
+	padding-top: 2%;
+	font-size: 20px;
+}
+#ex{
+   margin-left: 10%;
+   margin-top: 2%;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+}
+.Intro h5{
+    padding-left: 10%;
+	padding-top: 2%;
+	font-size: 20px;
+}
+.Intro h6{
+    padding-left: 10%;
+	padding-top: 2%;
+	font-size: 20px;
+}
+
+
+.Intro p{
+    padding-left: 10%;
+	margin-top: 5px;
+	padding-right: 20%;
+	font-size: 17px;
+	font-weight: 500;
+	color: #000000;
+}
+
+@media(max-width:800px){
+	nav img{
+		width: 150px;
+	}
+	.nav-links ul li a{
+		font-size: 15px;
+	}
+	.Intro{
+		margin-top: 10%;
+		padding-bottom: 5%;
+	}
+	.Intro h1{
+		font-size: 20px;
+	}
+	.Intro h2{
+		font-size: 18px;
+	}
+	.Intro h3{
+		font-size: 15px;
+	}
+	.Intro h4{
+		font-size: 15px;
+	}
+	.Intro h5{
+		font-size: 15px;
+	}
+	.Intro h6{
+		font-size: 15px;
+	}
+	.Intro p{
+		font-size: 13px;
+	}
+}
+@media(max-width:400px){
+	nav img{
+		width: 100px;
+	}
+	.nav-links ul li a{
+		font-size: 13px;
+	}
+	.Intro{
+		padding-top: 20%;
+		padding-bottom: 5%;
+	}
+	.Intro h1{
+		font-size: 18px;
+		position: relative;
+	}
+	.Intro h2{
+		font-size: 15px;
+	}
+	.Intro h3{
+		font-size: 13px;
+	}
+	.Intro h4{
+		font-size: 13px;
+	}
+	.Intro h5{
+		font-size: 13px;
+	}
+	.Intro h6{
+		font-size: 13px;
+	}
+	.Intro p{
+		font-size: 11px;
+	}
+}
+	
+/*----------------Guide----------------*/
